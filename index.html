@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script><title>ICT 10</title>
+    <title>Skills Test</title>
+</head>
+
+<style>
+
+/* FONT AND PAGE DESIGN */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F8F7FC;
+    color: #39244F;
+    margin: 0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+    background: #FFFFFF;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(80, 49, 111, 0.10);
+}
+
+/* MAIN HEADING */
+h1 {
+    color: #50316F;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* DESCRIPTION */
+.container p {
+    color: #887B96;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* INPUT BOX */
+input {
+    width: 85%;
+    padding: 15px;
+    border: 2px solid #D9C8ED;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #39244F;
+    background: #FCFAFF;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #7654A5;
+    box-shadow: 0 0 8px rgba(118, 84, 165, 0.20);
+}
+
+/* SEARCH BUTTON */
+button {
+    background: #50316F;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 15px 0 25px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #7654A5;
+    box-shadow: 0 5px 15px rgba(80, 49, 111, 0.20);
+}
+
+/* SEARCH RESULT HEADING */
+h3 {
+    color: #50316F;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 15px auto;
+}
+
+/* SEARCH RESULT INFORMATION */
+body > p {
+    background: #FFFFFF;
+    max-width: 480px;
+    margin: 10px auto;
+    padding: 15px 20px;
+    border-left: 4px solid #7654A5;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(80, 49, 111, 0.07);
+    text-align: left;
+    color: #59466D;
+    font-size: 14px;
+}
+
+/* RESULT VALUES */
+body > p span {
+    color: #7654A5;
+    font-weight: 600;
+}
+
+/* RESULT LABELS */
+body > p b {
+    color: #39244F;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <h1>Nonmetal Element Information</h1>
+        <p>Enter a Nonmetal element symbol to search</p>
+
+        <input type="text" id="element1" placeholder="Enter element (e.g., HYDROGEN)">
+    </div>
+    <br>
+
+    <button py-click="search_element">Search Element</button>
+
+    <br>
+    <div class="result"></div>
+    <h3>SEARCH RESULT</h3>
+    <p><b> Element Symbol:</b> <span id="symbol"></span></p>
+    <p><b> Element Name:</b> <span id="name"></span></p>
+    <p><b> Atomic Number:</b><span id="number"></span></p>
+    <p><b> Atomic Mass:</b> <span id="mass"></span></p>
+
+    <!-- Connect python file -->
+    <script type="py" src="main.py"></script>
+</body>
+</html>
